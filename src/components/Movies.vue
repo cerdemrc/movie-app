@@ -13,6 +13,7 @@
                 <i class="fas fa-square"></i> {{ movie.time }} min ·
                 {{ movie.year }}
               </p>
+              <a><i :class="isFavorite(movie.favorite)"></i></a>
               <h1 class="card-text">{{ movie.name }}</h1>
             </div>
           </div>
@@ -24,9 +25,22 @@
 
 <script>
 export default {
+  //far fa-heart    fas fa-heart (dolu)
+  data() {
+    return {};
+  },
   computed: {
     movies() {
       return this.$store.getters.getMovies;
+    },
+  },
+  methods: {
+    isFavorite(value) {
+      if (value) {
+        return "fas fa-heart";
+      } else {
+        return "far fa-heart";
+      }
     },
   },
 };
@@ -46,10 +60,19 @@ export default {
   }
 
   & .card-body {
-    & .fas {
+    & .fa-square {
       color: $red;
       font-size: 0.7rem;
       padding: 10px;
+    }
+    & .fa-heart {
+      color: $red;
+      font-size: 1.5rem;
+      padding-bottom: 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
     & h1 {
       font-size: 1.2rem;

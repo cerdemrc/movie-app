@@ -11,7 +11,8 @@ export const store = new Vuex.Store({
                 image: "felsefe-tasi",
                 name: "Harry Potter and the Philosopher's Stone",
                 year: "2001",
-                time: "152"
+                time: "152",
+                favorite: false,
             },
             {
                 id: 2,
@@ -19,7 +20,8 @@ export const store = new Vuex.Store({
                 image: "sirlar-odasi",
                 name: "Harry Potter and the Chamber of Secrets",
                 year: "2002",
-                time: "161"
+                time: "161",
+                favorite: false,
             },
             {
                 id: 3,
@@ -27,7 +29,8 @@ export const store = new Vuex.Store({
                 image: "azkaban",
                 name: "Harry Potter and the Prisoner of Azkaban",
                 year: "2004",
-                time: "142"
+                time: "142",
+                favorite: false,
             },
             {
                 id: 4,
@@ -35,7 +38,8 @@ export const store = new Vuex.Store({
                 image: "ates-kadehi",
                 name: "Harry Potter and the Goblet of Fire",
                 year: "2005",
-                time: "157"
+                time: "157",
+                favorite: false,
             },
             {
                 id: 5,
@@ -43,7 +47,8 @@ export const store = new Vuex.Store({
                 image: "zumruduanka",
                 name: "Harry Potter and the Order of the Phoenix",
                 year: "2007",
-                time: "138"
+                time: "138",
+                favorite: false,
             },
             {
                 id: 6,
@@ -51,7 +56,8 @@ export const store = new Vuex.Store({
                 image: "melez-prens",
                 name: "Harry Potter and the Half-Blood Prince",
                 year: "2009",
-                time: "153"
+                time: "153",
+                favorite: false,
             },
             {
                 id: 7,
@@ -59,7 +65,8 @@ export const store = new Vuex.Store({
                 image: "son-jedi",
                 name: "Star Wars: The Last Jedi",
                 year: "2017",
-                time: "152"
+                time: "152",
+                favorite: false,
             },
         ],
         favorites: []
