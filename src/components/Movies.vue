@@ -9,7 +9,10 @@
               :src="require(`../assets/images/${movie.image}.jpg`)"
             />
             <div class="card-body">
-              <p>{{ movie.time }} min · {{ movie.year }}</p>
+              <p>
+                <i class="fas fa-square"></i> {{ movie.time }} min ·
+                {{ movie.year }}
+              </p>
               <h1 class="card-text">{{ movie.name }}</h1>
             </div>
           </div>
@@ -43,6 +46,11 @@ export default {
   }
 
   & .card-body {
+    & .fas {
+      color: $red;
+      font-size: 0.7rem;
+      padding: 10px;
+    }
     & h1 {
       font-size: 1.2rem;
       font-weight: bold;
