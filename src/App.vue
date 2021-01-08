@@ -2,19 +2,17 @@
   <div id="app">
     <Header />
     <Search />
-    <Movies />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header";
 import Search from "./components/Search";
-import Movies from "./components/Movies";
 export default {
   components: {
     Header,
     Search,
-    Movies,
   },
 };
 </script>

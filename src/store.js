@@ -74,9 +74,20 @@ export const store = new Vuex.Store({
     getters: {
         getMovies(state) {
             return state.movies;
+        },
+        getFavorites(state) {
+            return state.favorites;
         }
     },
-    mutations: {},
+    mutations: {
+        addFavorite(state, id) {
+            state.movies[id - 1].favorite = true;
+            state.favorites.push(state.movies[id - 1]);
+        },
+        removeFavorite(state, payload) {
+            state.movies[id - 1].favorite = false;
+        }
+    },
     actions: {}
 })
 

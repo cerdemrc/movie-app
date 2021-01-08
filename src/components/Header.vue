@@ -1,8 +1,10 @@
 <template>
   <div class="header">
     <ul>
-      <li><a href="#">Movies</a></li>
-      <li><a href="#">Favorites</a></li>
+      <!-- <li><a href="#">Movies</a></li> -->
+      <router-link to="/movies" tag="li"><a>Movies</a></router-link>
+      <router-link to="/favorites" tag="li"><a>Favorites</a></router-link>
+      <!-- <li><a href="#">Favorites</a></li> -->
     </ul>
     <div class="line"></div>
   </div>
