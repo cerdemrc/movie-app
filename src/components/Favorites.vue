@@ -2,7 +2,7 @@
   <div class="container">
     <div class="card-deck">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mt-5">
-        <div class="col mb-4" v-for="movie in movies" :key="movie.id">
+        <div class="col mb-4" v-for="movie in favorites" :key="movie.id">
           <div class="card">
             <img
               class="card-img-top"
@@ -31,8 +31,8 @@ export default {
     return {};
   },
   computed: {
-    movies() {
-      return this.$store.getters.getMovies;
+    favorites() {
+      return this.$store.getters.getFavorites;
     },
   },
   methods: {
