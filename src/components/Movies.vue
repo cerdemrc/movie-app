@@ -27,31 +27,24 @@
 </template>
 
 <script>
-import Search from "../components/Search"
+import Search from "../components/Search";
 export default {
-  components:{
-    Search
+  components: {
+    Search,
   },
-  data(){
-    return{
-      isSearch: null
-    }
+  data() {
+    return {
+      isSearch: null,
+    };
   },
   computed: {
     movies() {
-      if(this.isSearch){
+      if (this.isSearch) {
         return this.$store.getters.getSearchLists;
-      }
-      else{
+      } else {
         return this.$store.getters.getMovies;
       }
-      // if(this.search == ""){
-      //   return this.$store.getters.getMovies;
-      // }
-      // else{
-      //   return this.$store.getters.getSearchLists;
-      // }
-    }
+    },
   },
   methods: {
     isFavorite(value) {
@@ -82,7 +75,7 @@ export default {
 
   & img {
     width: 100%;
-    height: 450px;
+    height: 300px;
   }
 
   & .card-body {

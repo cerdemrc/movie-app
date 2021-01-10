@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <ul>
-      <router-link to="/movies" tag="li"><a>Movies</a></router-link>
+      <router-link to="/" tag="li"><a>Movies</a></router-link>
       <router-link to="/favorites" tag="li"><a>Favorites</a></router-link>
     </ul>
     <div class="line"></div>

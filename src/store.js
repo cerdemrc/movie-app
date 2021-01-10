@@ -117,7 +117,6 @@ export const store = new Vuex.Store({
             state.searchLists = search;
         }
     },
-    actions: {}
 })
 
 export default store;
