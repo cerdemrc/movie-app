@@ -24,7 +24,7 @@ export default {};
     list-style: none;
 
     & li {
-      margin-left: 50px;
+      margin-left: 10px;
       margin-right: 50px;
       font-size: 1.2rem;
       & a {

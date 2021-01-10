@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <Search @search="isSearch = $event" />
     <div class="card-deck">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mt-5">
         <div class="col mb-4" v-for="movie in movies" :key="movie.id">
@@ -26,14 +27,31 @@
 </template>
 
 <script>
+import Search from "../components/Search"
 export default {
-  data() {
-    return {};
+  components:{
+    Search
+  },
+  data(){
+    return{
+      isSearch: null
+    }
   },
   computed: {
     movies() {
-      return this.$store.getters.getMovies;
-    },
+      if(this.isSearch){
+        return this.$store.getters.getSearchLists;
+      }
+      else{
+        return this.$store.getters.getMovies;
+      }
+      // if(this.search == ""){
+      //   return this.$store.getters.getMovies;
+      // }
+      // else{
+      //   return this.$store.getters.getSearchLists;
+      // }
+    }
   },
   methods: {
     isFavorite(value) {

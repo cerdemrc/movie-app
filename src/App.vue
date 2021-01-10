@@ -1,18 +1,15 @@
 <template>
   <div id="app">
     <Header />
-    <!-- <Search /> -->
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header";
-import Search from "./components/Search";
 export default {
   components: {
     Header,
-    Search,
   },
 };
 </script>

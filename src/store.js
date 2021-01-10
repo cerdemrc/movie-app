@@ -7,7 +7,6 @@ export const store = new Vuex.Store({
     state: {
         movies: [{
                 id: 1,
-                search: "Harry Potter",
                 image: "felsefe-tasi",
                 name: "Harry Potter and the Philosopher's Stone",
                 year: "2001",
@@ -16,7 +15,6 @@ export const store = new Vuex.Store({
             },
             {
                 id: 2,
-                search: "Lord of Rings",
                 image: "lord-of",
                 name: "The Lord of the Rings: The Return of the King",
                 year: "2003",
@@ -25,7 +23,6 @@ export const store = new Vuex.Store({
             },
             {
                 id: 3,
-                search: "Marvel",
                 image: "spiderman",
                 name: "Spider-Man: Homecoming",
                 year: "2017",
@@ -34,7 +31,6 @@ export const store = new Vuex.Store({
             },
             {
                 id: 4,
-                search: "Harry Potter",
                 image: "ates-kadehi",
                 name: "Harry Potter and the Goblet of Fire",
                 year: "2005",
@@ -43,7 +39,6 @@ export const store = new Vuex.Store({
             },
             {
                 id: 5,
-                search: "Harry Potter",
                 image: "zumruduanka",
                 name: "Harry Potter and the Order of the Phoenix",
                 year: "2007",
@@ -52,7 +47,6 @@ export const store = new Vuex.Store({
             },
             {
                 id: 6,
-                search: "Vendetta",
                 image: "vendetta",
                 name: "V for Vendetta",
                 year: "2006",
@@ -61,7 +55,6 @@ export const store = new Vuex.Store({
             },
             {
                 id: 7,
-                search: "Harry Potter",
                 image: "melez-prens",
                 name: "Harry Potter and the Half-Blood Prince",
                 year: "2009",
@@ -70,7 +63,6 @@ export const store = new Vuex.Store({
             },
             {
                 id: 8,
-                search: "Star Wars",
                 image: "son-jedi",
                 name: "Star Wars: The Last Jedi",
                 year: "2017",
@@ -79,7 +71,6 @@ export const store = new Vuex.Store({
             },
             {
                 id: 9,
-                search: "Harry Potter",
                 image: "sirlar-odasi",
                 name: "Harry Potter and the Chamber of Secrets",
                 year: "2002",
@@ -88,7 +79,6 @@ export const store = new Vuex.Store({
             },
             {
                 id: 10,
-                search: "Harry Potter",
                 image: "azkaban",
                 name: "Harry Potter and the Prisoner of Azkaban",
                 year: "2004",
@@ -96,7 +86,8 @@ export const store = new Vuex.Store({
                 favorite: false,
             },
         ],
-        favorites: []
+        favorites: [],
+        searchLists: ""
     },
     getters: {
         getMovies(state) {
@@ -104,6 +95,9 @@ export const store = new Vuex.Store({
         },
         getFavorites(state) {
             return state.favorites;
+        },
+        getSearchLists(state) {
+            return state.searchLists;
         }
     },
     mutations: {
@@ -112,9 +106,15 @@ export const store = new Vuex.Store({
             state.favorites.push(state.movies[id - 1]);
         },
         removeFavorite(state, getId) {
-            state.movies[getId - 1].favorite = false; 
-            const index = state.favorites.findIndex(i => i.id === getId); 
+            state.movies[getId - 1].favorite = false;
+            const index = state.favorites.findIndex(i => i.id === getId);
             state.favorites.splice(index, 1);
+        },
+        search(state, value) {
+            const search = state.movies.filter(i => {
+                return i.name.toLowerCase().match(value.toLowerCase());
+            })
+            state.searchLists = search;
         }
     },
     actions: {}

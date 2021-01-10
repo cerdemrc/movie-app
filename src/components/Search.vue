@@ -1,7 +1,6 @@
 <template>
   <div class="search">
-    <input type="text" v-model="search" placeholder="Search" />
-    <button class="btn btn-outline-light">Bul</button>
+    <input @keyup="Search" type="text" v-model="search" placeholder="Search" />
   </div>
 </template>
 
@@ -12,6 +11,12 @@ export default {
       search: "",
     };
   },
+  methods:{
+    Search(){
+      this.$store.commit("search", this.search);
+      this.$emit("search", true);
+    },
+  }
 };
 </script>
 
