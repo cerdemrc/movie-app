@@ -111,8 +111,10 @@ export const store = new Vuex.Store({
             state.movies[id - 1].favorite = true;
             state.favorites.push(state.movies[id - 1]);
         },
-        removeFavorite(state, payload) {
-            state.movies[id - 1].favorite = false;
+        removeFavorite(state, getId) {
+            state.movies[getId - 1].favorite = false; 
+            const index = state.favorites.findIndex(i => i.id === getId); 
+            state.favorites.splice(index, 1);
         }
     },
     actions: {}

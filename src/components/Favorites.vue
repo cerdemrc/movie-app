@@ -44,11 +44,7 @@ export default {
       }
     },
     favorite(value) {
-      if (value.favorite) {
-        this.$store.commit("removeFavorite", value.id);
-      } else {
-        this.$store.commit("addFavorite", value.id);
-      }
+      this.$store.commit("removeFavorite", value.id);
     },
   },
 };
