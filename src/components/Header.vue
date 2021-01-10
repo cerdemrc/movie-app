@@ -15,6 +15,9 @@ export default {};
 <style lang="scss">
 @import "../style/style.scss";
 .header {
+  .active {
+    color: greenyellow;
+  }
   & ul {
     display: flex;
     flex-flow: row;

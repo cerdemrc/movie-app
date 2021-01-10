@@ -50,38 +50,6 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import "../style/style.scss";
-
-.card {
-  background-color: $navy-blue;
-  color: white;
-  border: none;
-
-  & img {
-    width: 100%;
-    height: 450px;
-  }
-
-  & .card-body {
-    & .fa-square {
-      color: $red;
-      font-size: 0.7rem;
-      padding: 10px;
-    }
-    & .fa-heart {
-      color: $red;
-      font-size: 1.5rem;
-      padding-bottom: 10px;
-
-      &:hover {
-        cursor: pointer;
-      }
-    }
-    & h1 {
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-  }
-}
+<style lang="scss" scoped>
+@import "../style/card-style.scss";
 </style>
