@@ -1,6 +1,6 @@
 <h3>about the project:</h3>
 <ul>
-  <li><a href="">⚡ DEMO</a></li>
+  <li><a href="https://application-movie.netlify.app/">⚡ DEMO</a></li>
   <li><a href="https://www.behance.net/gallery/110899517/Movie-App-Design">🖍️ UI Design</a></li>
 </ul>
 
