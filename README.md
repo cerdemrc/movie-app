@@ -1,24 +1,7 @@
-# movie-app
+<h3>about the project:</h3>
+<ul>
+  <li><a href="">⚡ DEMO</a></li>
+  <li><a href="https://www.behance.net/gallery/110899517/Movie-App-Design">🖍️ UI Design</a></li>
+</ul>
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+<img src="https://user-images.githubusercontent.com/40372039/104137526-883c4c00-53ae-11eb-912a-e359bc05e365.png">
