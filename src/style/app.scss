@@ -1,0 +1,20 @@
+@import "./variables.scss";
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1rem;
+    font-family: var(--poppins);
+    background-color: rgba(var(--blue));
+}
+
+
+
+      

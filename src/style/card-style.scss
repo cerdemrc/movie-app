@@ -1,12 +1,13 @@
-@import "./style.scss";
+@import "./variables.scss";
 
 .card {
-  background-color: $navy-blue;
-  color: white;
+  background-color: rgba(var(--blue));
+  color: rgba(var(--white));
   border: none;
 
   &:hover {
-    box-shadow: 1px 1px 10px $white;
+    box-shadow: 1px 1px 30px rgba(var(--white), 0.1);
+    cursor: pointer;
   }
 
   & img {
@@ -16,12 +17,12 @@
 
   & .card-body {
     & .fa-square {
-      color: $red;
+      color: rgba(var(--red));
       font-size: 0.7rem;
       padding: 10px;
     }
     & .fa-heart {
-      color: $red;
+      color: rgba(var(--red));
       font-size: 1.5rem;
       padding-bottom: 10px;
 
