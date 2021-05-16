@@ -1,12 +1,13 @@
-import Movies from "./components/Movies";
-import Favorites from "./components/Favorites";
-
 export const routes = [{
         path: "/",
-        component: Movies
+        name:"Movies",
+        component: () => 
+            import(/* webpackChunkName: "movies" */ './components/Movies')
     },
     {
         path: "/favorites",
-        component: Favorites
+        name:"Favorites",
+        component: () => 
+            import(/* webpackChunkName: "favorites" */ './components/Favorites')
     }
 ]
