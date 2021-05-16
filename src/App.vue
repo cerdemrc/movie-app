@@ -15,16 +15,12 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./style/style.scss";
+@import "./style/app.scss";
 #app {
-  font-family: $poppins;
+  font-family: var(--poppins);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   margin-top: 40px;
-}
-
-body {
-  background-color: $navy-blue;
 }
 </style>

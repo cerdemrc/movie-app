@@ -98,6 +98,9 @@ export const store = new Vuex.Store({
         },
         getSearchLists(state) {
             return state.searchLists;
+        },
+        getFavoriteFilmCount(state){
+            return state.favorites.length;
         }
     },
     mutations: {

@@ -13,7 +13,7 @@ export default {};
 </script>
 
 <style lang="scss">
-@import "../style/style.scss";
+@import "../style/app.scss";
 .header {
   .active {
     color: greenyellow;
@@ -32,10 +32,10 @@ export default {};
       font-size: 1.2rem;
       & a {
         text-decoration: none;
-        color: $white;
+        color: rgba(var(--white));
 
         &:hover {
-          color: $red;
+          color: rgba(var(--red));
         }
       }
     }
@@ -47,7 +47,7 @@ export default {};
   justify-content: center;
   align-items: center;
   margin: auto;
-  border-top: 1px solid $white;
+  border-top: 1px solid rgba(var(--white));
   width: 60%;
   margin-top: 10px;
 }
