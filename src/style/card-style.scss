@@ -1,38 +1,41 @@
-@import "./variables.scss";
+@import './variables.scss';
 
 .card {
-  background-color: rgba(var(--blue));
-  color: rgba(var(--white));
-  border: none;
+	background-color: rgba(var(--blue));
+	color: rgba(var(--white));
+	border: none;
 
-  &:hover {
-    box-shadow: 1px 1px 30px rgba(var(--white), 0.1);
-    cursor: pointer;
-  }
+	&:hover {
+		box-shadow: 1px 1px 30px rgba(var(--white), 0.1);
+		cursor: pointer;
+	}
 
-  & img {
-    width: 100%;
-    height: 450px;
-  }
+	& img {
+		width: 100%;
+		height: 450px;
+	}
+	&-deck .row {
+		width: 100%;
+	}
 
-  & .card-body {
-    & .fa-square {
-      color: rgba(var(--red));
-      font-size: 0.7rem;
-      padding: 10px;
-    }
-    & .fa-heart {
-      color: rgba(var(--red));
-      font-size: 1.5rem;
-      padding-bottom: 10px;
+	& .card-body {
+		& .fa-square {
+			color: rgba(var(--red));
+			font-size: 0.7rem;
+			padding: 10px;
+		}
+		& .fa-heart {
+			color: rgba(var(--red));
+			font-size: 1.5rem;
+			padding-bottom: 10px;
 
-      &:hover {
-        cursor: pointer;
-      }
-    }
-    & h1 {
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-  }
+			&:hover {
+				cursor: pointer;
+			}
+		}
+		& h1 {
+			font-size: 1.2rem;
+			font-weight: bold;
+		}
+	}
 }
